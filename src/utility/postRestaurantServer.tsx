@@ -1,3 +1,5 @@
+import { Restaurant } from "../types/types"
+
 export const postRestaurantServer = async (newName: string, newRating: number) => {
   const params = {
     name: newName,
@@ -6,8 +8,8 @@ export const postRestaurantServer = async (newName: string, newRating: number) =
 
   const postOptions = {
     method: "POST",
-    body: JSON.stringify(params),
-    header: {
+    body: JSON.stringify(params as Restaurant),
+    headers: {
       "Content-Type": "application/json"
     }
   }

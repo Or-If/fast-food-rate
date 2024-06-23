@@ -14,14 +14,22 @@ app.get("/", (request, response) => {
   response.send(data);
 })
 
+app.get("/:name", (request, response) => {
+  const data = JSON.parse(fs.readFileSync("src/server/restaurants.json", "utf-8")) as Array<Restaurant>;
+  const userData = request.params.name;
+  const filteredData = data.filter((restaurant) => {
+    return userData === restaurant.name
+  })
+  response.send(filteredData)
+})
+
 
 app.post("/", (request, response) => {
   const data = JSON.parse(fs.readFileSync("src/server/restaurants.json", "utf-8")) as Array<Restaurant>;
-  //console.log(response)
-  //console.log(data)
-  //console.log(request)
-  console.log(request.params)
-  //const newData = data.push()
+  const newRestaurant = request.body as Restaurant
+  data.push(newRestaurant)
+  fs.writeFileSync("src/server/restaurants.json", JSON.stringify(data));
+  response.send(newRestaurant)
 })
 
 

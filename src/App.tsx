@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { useGetRestaurants } from './hooks/useGetRestaurants';
 import { PostForm } from './components/PostForm';
+import { SearchForm } from './components/SearchForm';
 
 function App() {
   const {getRestaurants, RestaurantData} = useGetRestaurants();
@@ -17,8 +18,10 @@ function App() {
   return (
     <>
       {wowRestaurant}
-      <br></br>
+      <hr></hr>
       <PostForm></PostForm>
+      <hr></hr>
+      <SearchForm></SearchForm>
     </>
   )
 }

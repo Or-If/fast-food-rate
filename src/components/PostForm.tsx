@@ -7,10 +7,10 @@ export const PostForm = () => {
 
   const buttonOnClick = () => {
     if(rating >= 1 && rating <= 5 && newRestaurant.length != 0) {
-      console.log("fired");
+      console.log("fired", newRestaurant, rating);
       postRestaurantServer(newRestaurant, rating);
-      //setRating(0)
-      //setNewRestaurant("")
+      setRating(0)
+      setNewRestaurant("")
     } else {
       console.log("Please enter both a valid rating 1-5 and a restaurant")
     }

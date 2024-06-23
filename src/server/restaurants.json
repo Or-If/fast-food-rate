@@ -1,14 +1,1 @@
-[
-  {
-    "name": "shelbies",
-    "rating": 5
-  },
-  {
-    "name": "ralphies",
-    "rating": 3
-  },
-  {
-    "name": "deans",
-    "rating": 4
-  }
-]
+[{"name":"shelbies","rating":5},{"name":"ralphies","rating":3},{"name":"deans","rating":4},{"name":"Ann's","rating":5}]

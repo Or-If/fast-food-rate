@@ -14,5 +14,5 @@ export const useGetRestaurants = () => {
     setRestaurantData(data)
   }
 
-  return {RestaurantData, getRestaurants}
-}
+  return { RestaurantData, getRestaurants }
+} 
